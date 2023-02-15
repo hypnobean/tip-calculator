@@ -19,8 +19,6 @@ body {
     color: var(--very-dark-cyan);
 }
 
-
-
 .page-container {
     height: 100vh;
     height: 100dvh;
@@ -212,9 +210,20 @@ input:focus {
 
 
 @media screen and (max-width: 880px) {
+    .page-container{
+        display: flex;
+        flex-direction: column;
+    }
     .calc-container {
       display: flex;
       flex-direction: column;
       margin: 0 15px;
+      height: 100%;
+      height: -webkit-fill-available;
+
+    }
+    .total-container {
+        height:  -webkit-fill-available;
+        max-height: 300px;
     }
   }
