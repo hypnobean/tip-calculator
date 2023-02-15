@@ -15,8 +15,6 @@ theForm.elements["bill"].addEventListener("input", function() {
 
 
 
-
-
 // Get value of button clicked, clear custom tip input
 for (var i = 0; i < theForm.elements["tip-btn"].length; i++)    {
     theForm.elements["tip-btn"][i].addEventListener("input", function() {
@@ -28,8 +26,7 @@ for (var i = 0; i < theForm.elements["tip-btn"].length; i++)    {
         theForm.elements["customPerCent"].value = "";
         customTipValue = 0;
         })
-}
-
+    }
 
 
 // Get Value of Custom Tip
@@ -49,8 +46,6 @@ theForm.elements["customPerCent"].addEventListener("click", function() {
 
 
 
-
-
 // Number of People
 theForm.elements["noOfPeople"].addEventListener("input", function() {
     noOfPeople = Number(theForm.elements["noOfPeople"].value);
@@ -59,12 +54,11 @@ theForm.elements["noOfPeople"].addEventListener("input", function() {
 
 
 
-
-
-
 // Update the totals on screen
+// Make sure that custom tip zero value still calculates 
+// MAKE SURE THAT CUSTOM TIP IS ZERO'D WHEN EVERYTHING IN IT IS DELETED
 function updateTipTotal() {
-    if (customTipValue > 0) {
+    if (theForm.elements["customPerCent"] && theForm.elements["customPerCent"].value) { // check this
         totalTipAmount = bill * customTipValue;
     }
     else if (tipButtonValue > 0) {
@@ -92,6 +86,13 @@ for (i = 0; i < theForm.elements.length; i++) {
 
 
 
+
+// Highlight text in text boxes for easy overwriting on mobile
+for (i = 0; i < theForm.elements.length; i++) {
+    theForm.elements[i].addEventListener("click", function() {
+        this.select();
+    }, false);
+}
 
 // Get reset button to clear all values and update innerHTML back to $0.00
 theForm.elements["reset"].addEventListener("click", function() {
