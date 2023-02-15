@@ -19,7 +19,7 @@
 
     <img src="images/logo.svg">
 
-  <div>
+
 
     <div class="calc-container">
       <div>
@@ -28,7 +28,7 @@
 
             <span>Bill</span>
             <div class="zero"></div>
-            <input id="bill" value="">
+            <input id="bill" value="" type="text" pattern="\d*">
         </div>
 
         <div class="sub-cont">
@@ -44,7 +44,7 @@
             <label for="twentyPerCent" class="tip-btn">20%</label>
             <input type="radio" value="50" name="tip-btn" id="fiftyPerCent">
             <label for="fiftyPerCent" class="tip-btn">50%</label>
-            <input class="custom-tip" type="text" placeholder="Custom" id="customPerCent">
+            <input class="custom-tip" type="text" placeholder="Custom" id="customPerCent"  pattern="\d*">
           </div>
 
         </div>
@@ -52,7 +52,7 @@
           <div class="cont-noOfPeople">
               <span>Number of People</span>
             <div class="zero"></div>
-              <input id="noOfPeople" value="1">
+              <input id="noOfPeople" value="1" type="text" pattern="\d*">
           </div>
         </div>
 
@@ -83,7 +83,6 @@
     </div>
     
 
-  </div>
 
   
   <div class="attribution">
