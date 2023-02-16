@@ -209,7 +209,7 @@ input:focus {
 }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 634px) {
     .page-container{
         display: flex;
         flex-direction: column;
