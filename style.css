@@ -213,6 +213,7 @@ input:focus {
     .page-container{
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }
     .calc-container {
       display: flex;
